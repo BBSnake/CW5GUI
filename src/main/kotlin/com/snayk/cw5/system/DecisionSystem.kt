@@ -20,7 +20,7 @@ class DecisionSystem(fileText: String) {
             val row: List<String> = rows[i].trim().split(" ")
             val descriptorsList: MutableList<Descriptor> = mutableListOf()
             (0 until row.size - 1).mapTo(descriptorsList) { Descriptor(it, columnNames[it], row[it]) }
-            decisionObjects.add(DecisionObject(i - 1, descriptorsList, row[row.size - 1]))
+            decisionObjects.add(DecisionObject(descriptorsList, row[row.size - 1]))
         }
     }
 

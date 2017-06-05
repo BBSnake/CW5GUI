@@ -1,6 +1,6 @@
 package com.snayk.cw5.system
 
-class DecisionObject(val index: Int, val descriptors: List<Descriptor>, val decision: String) {
+data class DecisionObject(val descriptors: List<Descriptor>, val decision: String) {
     override fun toString(): String {
         var text = ""
         for(desc in descriptors) {
